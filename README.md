@@ -19,17 +19,11 @@ sales, profit and product / country performance.
 
 4.Data Pre-processing
 
-Visualizations produced
+5.Derived metrics
 
-Key observations (from the notebook)
+6.Aggregation examples
 
-Suggested improvements / next steps
-
-Recommended repository structure
-
-Requirements
-
-License & credits
+7.Visualizations
 
 -----------------------------------------------------------------------------------------------------
 
@@ -82,4 +76,51 @@ Fills missing values for Discounts , Profit and Profit Margin % (with 0 in the n
 Converts Date to datetime and (where present) uses Year for aggregation
 
 ---------------------------------------------------------------------------------------------------
+# 5.Derived metrics
+
+Creates Profit Margin % as (Profit / Sales) * 100 (and handles divide-by-zero / NaNs)
+
+--------------------------------------------------------------------------------------------------
+# 6. Aggregation examples
+
+Aggregates Sales by Year & Segment
+
+Groups Profit Margin % by Product
+
+Computes country_wise_sales and country_profit aggregations (Sales & Profit by Country)
+
+--------------------------------------------------------------------------------------------------
+# 7. Visualizations
+
+Profit Margin by Product — pie chart (shows relative profit contribution per product)
+
+Units Sold by Country & Segment — grouped bar plot (helps find which country/segment
+combination sells the most units)
+
+Profit Margin % by Country — boxplot (shows distribution and spread across countries)
+
+Sales vs Profit — scatterplot (check linear relationship; outliers)
+
+Profit by Country — horizontal bar chart (rank countries by profit)
+
+Total Sales Trend — line chart over time
+
+Total Profit Trend — line chart over time
+
+Distribution of Profit Margins — histogram with mean
+
+Correlation Heatmap — heatmap of correlations between numeric columns (Units Sold, Prices,
+Sales, COGS, Profit, Profit Margin %)
+
+----------------------------------------------------------------------------------------------------
+# Key Findings - Visuals
+
+<img width="485" height="528" alt="image" src="https://github.com/user-attachments/assets/44e7ed2d-7536-4435-975b-30fe5e0cb6d6" />
+
+<img width="840" height="548" alt="image" src="https://github.com/user-attachments/assets/0e7faf9f-8797-4a16-b91d-e6513f6b7d27" />
+
+<img width="977" height="545" alt="image" src="https://github.com/user-attachments/assets/3160f266-0251-4ae2-9ebe-fcc64373df37" />
+
+
+
 
