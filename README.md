@@ -15,15 +15,17 @@ sales, profit and product / country performance.
 
 2.Dataset
 
-3.Data Loading and Initial Overview
+3.Findings Before Cleaning
 
-4.Data Pre-processing
+4.Data Loading and Initial Overview
 
-5.Derived metrics
+5.Data Pre-processing
 
-6.Aggregation examples
+6.Derived metrics
 
-7.Visualizations
+7.Aggregation examples
+
+8.Visualizations
 
 -----------------------------------------------------------------------------------------------------
 
@@ -56,7 +58,22 @@ Financial_cleaned.csv (Cleaned Dataset)
 Final Project Finance - Visualization.ipynb
 
 -------------------------------------------------------------------------------------------------------
-# 3.Data Loading and Initial Overview
+# 3.Findings Before Cleaning
+   
+Shape: (700 rows, 16 columns)
+
+Missing Values: None (every column has 700 non-null values).
+
+Duplicates: 0 duplicate rows.
+
+Data Types Issue:
+
+Most numeric columns (e.g., Units Sold, Manufacturing Price, Sale Price, Gross Sales, Discounts, Sales, COGS, Profit) are stored as object (strings) instead of numbers → need conversion to numeric.
+
+Date Column: Date is currently object, should be converted to datetime.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+# 4.Data Loading and Initial Overview
 
 Imports: pandas , numpy , matplotlib.pyplot , seaborn
 
@@ -65,7 +82,7 @@ Reads Financials.csv into df_financials
 Displays .shape , .head() , .info() and basic checks
 
 ------------------------------------------------------------------------------------------------------
-# 4.Data Pre-processing
+# 5.Data Pre-processing
 
 Cleans numeric/currency columns by removing spaces, $ signs and commas
 
@@ -76,12 +93,12 @@ Fills missing values for Discounts , Profit and Profit Margin % (with 0 in the n
 Converts Date to datetime and (where present) uses Year for aggregation
 
 ---------------------------------------------------------------------------------------------------
-# 5.Derived metrics
+# 6.Derived metrics
 
 Creates Profit Margin % as (Profit / Sales) * 100 (and handles divide-by-zero / NaNs)
 
 --------------------------------------------------------------------------------------------------
-# 6. Aggregation examples
+# 7. Aggregation examples
 
 Aggregates Sales by Year & Segment
 
@@ -90,7 +107,7 @@ Groups Profit Margin % by Product
 Computes country_wise_sales and country_profit aggregations (Sales & Profit by Country)
 
 --------------------------------------------------------------------------------------------------
-# 7. Visualizations
+# 8. Visualizations
 
 Profit Margin by Product — pie chart (shows relative profit contribution per product)
 
